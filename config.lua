@@ -11,8 +11,8 @@ Config = {
     },
 
     Position = {
-    	Boss = {vector3(-31.26, -1106.74, 26.42)},
-    	Coffre = {vector3(-31.07, -1110.92, 26.42)},
+        Boss = {vector3(-31.26, -1106.74, 26.42)},
+        Coffre = {vector3(-31.07, -1110.92, 26.42)},
         Fournisseur = {vector3(-26.87, -1090.31, 26.42)},
         Vestaire = {vector3(-50.38, -1089.26, 26.42)}, 
         Garage = {vector3(-19.64, -1086.60, 26.58)},
@@ -399,54 +399,54 @@ Config = {
                 {Name = "Zorusso", Model = "zorrusso", Prix= 165000},
             }
         }
-    },
+    }
+}
 
-    Vestiaire = {
-    	clothes = {
-            grades = {
-                [0] = {
-                    label = "Tenue Personnel",
-                    minimum_grade = 0,
-                    variations = {male = {}, female = {}},
-                    onEquip = function()
-                        ESX.TriggerServerCallback('esx_skin:getPlayerSkin', function(skin) TriggerEvent('skinchanger:loadSkin', skin) end)
-                        SetPedArmour(PlayerPedId(), 0)
-                    end
-                },
-                [1] = {
-                    label = "Tenue Concessionaire",
-                    minimum_grade = 0,
-                    variations = {
-                    male = {
-                        bags_1 = 0, bags_2 = 0,
-                        tshirt_1 = 129, tshirt_2 = 0,
-                        torso_1 = 219, torso_2 = 6,
-                        arms = 86,
-                        pants_1 = 66, pants_2 = 0,
-                        shoes_1 = 25, shoes_2 = 0,
-                        mask_1 = 0, mask_2 = 0,
-                        bproof_1 = 14, bproof_2 = 0,
-                        helmet_1 = -1, helmet_2 = 0,
-                        chain_1 = 0, chain_2 = 0,
-                        decals_1 = 0, decals_2 = 0,
-                    },
-                    female = {
-                        bags_1 = 0, bags_2 = 0,
-                        tshirt_1 = 129, tshirt_2 = 0,
-                        torso_1 = 79, torso_2 = 6,
-                        arms = 86,
-                        pants_1 = 33, pants_2 = 0,
-                        shoes_1 = 25, shoes_2 = 0,
-                        mask_1 = 0, mask_2 = 0,
-                        bproof_1 = 14, bproof_2 = 0,
-                        helmet_1 = -1, helmet_2 = 0,
-                        chain_1 = 0, chain_2 = 0,
-                        decals_1 = 0, decals_2 = 0
-                    }
-                },
+Vestiaire = {
+    clothes = {
+        grades = {
+            [0] = {
+                label = "Tenue Personnel",
+                minimum_grade = 0,
+                variations = {male = {}, female = {}},
                 onEquip = function()
+                    ESX.TriggerServerCallback('esx_skin:getPlayerSkin', function(skin) TriggerEvent('skinchanger:loadSkin', skin) end)
+                    SetPedArmour(PlayerPedId(), 0)
                 end
+            },
+            [1] = {
+                label = "Tenue Concessionaire",
+                minimum_grade = 0,
+                variations = {
+                male = {
+                    bags_1 = 0, bags_2 = 0,
+                    tshirt_1 = 129, tshirt_2 = 0,
+                    torso_1 = 219, torso_2 = 6,
+                    arms = 86,
+                    pants_1 = 66, pants_2 = 0,
+                    shoes_1 = 25, shoes_2 = 0,
+                    mask_1 = 0, mask_2 = 0,
+                    bproof_1 = 14, bproof_2 = 0,
+                    helmet_1 = -1, helmet_2 = 0,
+                    chain_1 = 0, chain_2 = 0,
+                    decals_1 = 0, decals_2 = 0,
+                },
+                female = {
+                    bags_1 = 0, bags_2 = 0,
+                    tshirt_1 = 129, tshirt_2 = 0,
+                    torso_1 = 79, torso_2 = 6,
+                    arms = 86,
+                    pants_1 = 33, pants_2 = 0,
+                    shoes_1 = 25, shoes_2 = 0,
+                    mask_1 = 0, mask_2 = 0,
+                    bproof_1 = 14, bproof_2 = 0,
+                    helmet_1 = -1, helmet_2 = 0,
+                    chain_1 = 0, chain_2 = 0,
+                    decals_1 = 0, decals_2 = 0
                 }
+            },
+            onEquip = function()
+            end
             }
         }
     }
